@@ -1,0 +1,24 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Michiel Mulders",
+      "genre": "fiction"
+    },
+    {
+      "name": "michiel",
+      "genre": "",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "some title",
+      "authorId": 1
+    }
+  ],
+  "library": {
+    "name": "City library"
+  }
+}
