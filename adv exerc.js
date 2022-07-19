@@ -55,8 +55,8 @@ function makeCounter() {
   console.log(myCounter()); //0
   console.log(myCounter()); //1
   console.log(myCounter.set(12));//12 
-  console.log(myCounter()); //12 ?
-  console.log(myCounter.decrease());//13 ?
+  console.log(myCounter()); //12 ? because it returns the counter value before incrementing
+  console.log(myCounter.decrease());//13 ? because it returns the counter value before decreasing
   console.log(myCounter.decrease());// 12
   console.log(myCounter()); //11
 

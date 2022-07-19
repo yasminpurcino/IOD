@@ -22,23 +22,24 @@ function truncate(text, maxlength) {     //dentro dos parenteses coloca o argume
   
     // truncate("Hi everyone!", 20) = "Hi everyone!"
   
-  
+    let truncate = text;
   
     if (text.length<maxlength) { 
-      
-    } 
+      //don't do anything if the text is already the right length
+    }
     // if ( condition ) {
     //    something happens
     // }
-  
-    let truncate = text.slice(0, maxlength - 1) + "..."
+    else {
+      truncate = text.slice(0, maxlength - 1) + "..." //only truncate and add ... if it's too long
+    }
     return truncate
      
   }
   console.log(truncate("What I'd like to tell on this topic is:",15))
   
   
-  console.log(truncate("What I'd like to tell on this topic is:", 150000))
+  console.log(truncate("What I'd like to tell on this topic is:", 150000)) //still prints the ... even though it wasn't truncated
   
   
   // contar quantos caractries
@@ -97,7 +98,7 @@ console.log(styles)
 
 let str= ["background-color","list-style-image","-webkit-transition" ]
 
-function camelize(str: str) { //'my-short-string'
+function camelize( str) { //'my-short-string'
   let newStr = "";
   let isDash = false;
   //console.log(str);
@@ -166,9 +167,9 @@ console.log( unique(values) );
 
 
 // Error: keys.push is not a function
-keys.push("more");
+//keys.push("more");
 
-Why? How can we fix the code to make keys.push work?
+//Why? How can we fix the code to make keys.push work?
 
 
 
@@ -178,7 +179,7 @@ map.set("name", "John");
 let keys = map.keys("b");
 console.log(map);
 
-
+keys.push("more") // now it works
 
 
 
@@ -204,13 +205,6 @@ console.log (sumSalaries(salaries))
 
 // 10 ex 
 
-
-
-const salaries = {
-  "John": 100,
-  "Pete": 300,
-  "Mary": 250
-};
 
 function topSalary(salaries){
   let maxSalary = 0;
