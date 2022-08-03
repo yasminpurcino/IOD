@@ -72,6 +72,13 @@
             document.getElementById("result").innerHTML = mult
         }
 
+        function clr()
+        {
+            document.getElementById("number1").value = '';
+            document.getElementById("number2").value = '';
+            document.getElementById("result").innerHTML = '';
+        }
+
 
     </script>
 
@@ -81,7 +88,7 @@
         <input type=number id="number2" name="number2">
         <br>
         <br>
-        <td><input type="button" value="c" onclick="clr()" /> </td>
+        <td><input type="button" value="c" onclick="clr()" /> </td> <!-- this function doesn't exist? have created one for you above  -->
 
     </div>
 

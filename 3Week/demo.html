@@ -1,36 +1,34 @@
 <!--
 <!DOCTYPE html>
 <html>
+  
+
+  <template id="card-template">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title"></div>
+            <div class="card-text"></div>
+        </div>
+    </div>
+</template>
+
     <head>
-         <script src="script2.js"></script> 
+         
     </head>
     <body>
 
         <div id="card-list"></div>
-        <button onclick="addNameCard()"> Add New Name Card</button>
+        <button onclick="addCard()"> Add New Name Card</button>
     </body>
-
-
-    <template id="card-template">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title"></div>
-                <div class="card-text"></div>
-            </div>
-        </div>
-    </template>
-
-
-
     <script>
         
-        const artist=[
+        const artist=[{
             name:"Van Gogh",
             portfolio:[
                 { 
                     
                     title:"portrait",
-                    url:"https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
+                    url:"https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
                      
                     
                 },
@@ -62,14 +60,14 @@
             document.querySelector('#card-list').appendChild(template);
         }
 
-        artist.portfolio.forEach(element => addCard(element.title, element.url)) 
+        //artist.portfolio.forEach(element => addCard(element.title, element.url)) 
         // let newTemp = document.createElement('template');
         // console.log(newTemp);
         // if ('content' in newTemp) {
         //     addCard();
         // }
     </script>
-
+<script src="script2.js"></script> 
     <style>
         body {
         font-family: Arial, Helvetica, sans-serif;
@@ -508,7 +506,7 @@ Copy
   </script>
 </html>
 
-
+-->
 
 <!DOCTYPE html>
 <html>
@@ -578,7 +576,7 @@ Copy
  </body>
 </html>
 
-
+<!--
 
 
 <html>
@@ -636,7 +634,7 @@ Copy
     </script>
   </body>
 </html>
--->
+
 
 <!DOCTYPE html>
 <html>
@@ -700,3 +698,4 @@ Copy
   </body>
 
 </html>
+-->

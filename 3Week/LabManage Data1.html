@@ -23,7 +23,12 @@
 
             document.querySelector('#card-list').appendChild(template)
         }
+    }
 
+    function addNewNews()
+    {
+        let newNews = document.getElementById('news-title').value;
+        let newContent = document.getElementById('news-content').value;
         let newObject = {
             id: news.length + 1,
             title: newNews,
@@ -31,7 +36,7 @@
         }
         news.push(newObject)
     }
-    document.get
+    //document.get
     setInterval(addCard, 1000)
 
 </script>
@@ -60,7 +65,7 @@
         <label for=" news-content">News Content:</label>
         <input name="news-content" id="news-content">
 
-        <button onclick="addNewNews()">Add New News</button>
+        <button onclick="addNewNews()">Add New News</button> <!-- this function doesn't exist? have added above -->
 
 
 
