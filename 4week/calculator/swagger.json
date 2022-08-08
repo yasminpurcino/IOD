@@ -9,7 +9,7 @@
             "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "host": "localhost:3000",
+    "host": "localhost:3030",
     "basePath": "/",
     "tags": [
         {
@@ -27,7 +27,7 @@
         "application/json"
     ],
     "paths": {
-        "/calculateRouter/add": {
+        "/calculatorRoute/add": {
             "get": {
                 "tags": [
                     "Addition Service"
@@ -35,12 +35,12 @@
                 "summary": "Add 2 numbers",
                 "parameters": [
                     {
-                        "number1": "num1",
+                        "name": "num1",
                         "in": "query",
                         "description": "the First Number"
                     },
                     {
-                        "nameumber2": "num2",
+                        "name": "num2",
                         "in": "query",
                         "description": "the Second number"
                     }
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/calculateRouter/sub": {
+        "/calculatorRoute/sub": {
             "get": {
                 "tags": [
                     "Addition Service"
@@ -60,38 +60,12 @@
                 "summary": "Add 2 numbers",
                 "parameters": [
                     {
-                        "number1": "num1",
+                        "name": "num1",
                         "in": "query",
                         "description": "the First Number"
                     },
                     {
-                        "nameumber2": "num2",
-                        "in": "query",
-                        "description": "the Second number"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "This service allows you to add two numbers together"
-                    }
-                }
-            }
-        },
-
-        "/calculateRouter/mul": {
-            "get": {
-                "tags": [
-                    "Addition Service"
-                ],
-                "summary": "Add 2 numbers",
-                "parameters": [
-                    {
-                        "number1": "num1",
-                        "in": "query",
-                        "description": "the First Number"
-                    },
-                    {
-                        "nameumber2": "num2",
+                        "name": "num2",
                         "in": "query",
                         "description": "the Second number"
                     }
@@ -104,7 +78,7 @@
             }
         },
 
-        "/calculateRouter/div": {
+        "/calculatorRoute/mul": {
             "get": {
                 "tags": [
                     "Addition Service"
@@ -112,12 +86,38 @@
                 "summary": "Add 2 numbers",
                 "parameters": [
                     {
-                        "number1": "num1",
+                        "name": "num1",
                         "in": "query",
                         "description": "the First Number"
                     },
                     {
-                        "nameumber2": "num2",
+                        "name": "num2",
+                        "in": "query",
+                        "description": "the Second number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "This service allows you to add two numbers together"
+                    }
+                }
+            }
+        },
+
+        "/calculatorRoute/div": {
+            "get": {
+                "tags": [
+                    "Addition Service"
+                ],
+                "summary": "Add 2 numbers",
+                "parameters": [
+                    {
+                        "name": "num1",
+                        "in": "query",
+                        "description": "the First Number"
+                    },
+                    {
+                        "name": "num2",
                         "in": "query",
                         "description": "the Second number"
                     }

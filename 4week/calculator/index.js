@@ -1,17 +1,17 @@
-var SwaggerPetstore = require('swagger_petstore');
+//var SwaggerPetstore = require('swagger_petstore');
 
 
 
 const express = require("express")
  
-let testRoute = require('./routes/myTestroute');
+//let testRoute = require('./routes/myTestroute');
 let calcRoute = require('./routes/calculateRouter');
-let petsRoute = require('./routes/petsRouter');
+//let petsRoute = require('./routes/petsRouter');
 
 
 const app = express()
 //const app2 = express()
-const port = 3000
+const port = 3030
 //const port2 = 2000
 
 //app.get('/test', (req, res) => {
@@ -24,17 +24,9 @@ const port = 3000
 
 
 app.use('/', express.static('public'))
-app.use('/calculateRouter', calcRoute)
-app.use('/petsRouter', petsRoute)
+app.use('/calculatorRoute', calcRoute)
+//app.use('/petsRouter', petsRoute)
 //app.use('/myteste', testRoute)
-
-
-
-app.listen(port, () => {
-    console.log(`Example app
-    listening at
-    http://localhost:${port}`)
-    })
 
     
 // add the Swaggerservice to our server, so let’s modify our index.js to include it.
@@ -45,6 +37,12 @@ app.use(
 swaggerUi.serve,
 swaggerUi.setup(swaggerDocument)
 );
+
+app.listen(port, () => {
+    console.log(`Example app
+    listening at
+    http://localhost:${port}`)
+    })
 
     
 
