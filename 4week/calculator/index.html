@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <title>Calculator Example</title>
+</head>
+
+<body>
+    <div> Add Result
+        <span id="addResult"></span>
+    </div>
+    <div>Sub Result
+        <span id="subResult"></span>
+    </div>
+    <div>Mul Result
+        <span id="mulResult"></span>
+    </div>
+    <div>Div Result
+        <span id="divResult"></span>
+    </div>
+
+
+</body>
+<script>
+    let num1 = 2;
+    let num2 = 4;
+    fetch(`/calculatorRoute/add?num1=${num1}&num2=${num2}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("addResult").innerHTML =
+
+                data.result;
+        })
+
+        
+        fetch(`/calculatorRoute/sub?num1=${num1}&num2=${num2}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("subResult").innerHTML =
+
+                data.result;
+
+                
+        })
+
+        fetch(`/calculatorRoute/mul?num1=${num1}&num2=${num2}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("mulResult").innerHTML =
+
+                data.result;
+
+                
+        })
+
+        fetch(`/calculatorRoute/div?num1=${num1}&num2=${num2}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("divResult").innerHTML =
+
+                data.result;
+
+                
+        })
+
+</script>
+
+</html>
