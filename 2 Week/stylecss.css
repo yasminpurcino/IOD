@@ -1,0 +1,109 @@
+
+/*h1 {
+    font-family: "Arial", Times, serif;
+    color: #111010;
+    background-color: rgb(222, 244, 222);
+    font-size: 1cm;
+    margin-bottom: .3em;
+    text-align: left;
+    line-height: 0em;
+    text-shadow: 0 0 3px #e2f5c8, 0 0 5px #0000FF;
+}
+
+.center {
+ 
+    font-size: 0.5cm;
+    text-align: left;
+
+  
+}
+
+button {
+    position: left;
+    bottom: 5px;
+    width: 10%;
+    border: 3px solid #8AC007;
+  border-bottom-color: #0000FF;
+  }
+
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+*/
+.center.topmsg {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 12cm;
+    text-align: center;
+    background-color: #c6f6ff;
+   
+}
+  
+.menu {
+    float: center;
+    
+  }
+  .menu ul {
+    list-style: none;
+     margin: 8px;
+    padding: 0
+  }
+  .menu li {
+    display: inline-block;
+    padding: 0 20px;
+  
+    
+  }
+  .menu a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a3a38;
+    background-color: rgb(253, 253, 253);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lato';
+    text-shadow: 0 0 0.1px #023038, 0 0 2px #023038;
+  }
+  .menu a:hover {
+    text-decoration: underline;
+  }
+
+  .fa-facebook {
+  background: #ffffff;
+  color: white;
+  width: 0.8em;
+  }
+
+  .fa-instagram {
+  background: #ffffff;
+  color: white;
+  width: 0.8em;
+  }
+  
+  .logo {
+    background: #ffffff;
+    text-align: center;
+    color: white;
+    width: 5em;
+    }
+
+    .dropplist {
+        display: none;
+        display: block;
+    }
+
+    .menu .has-dropplist:hover .dropplist{ display:block; }
+  

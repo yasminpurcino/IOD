@@ -1,0 +1,45 @@
+h1 {
+  font-family: "Brush Script MT", Times, cursive;
+  color: #EDDFD8;
+  font-size: 1cm;
+  margin-bottom: .3em;
+  text-align: left;
+  line-height: 0em;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+p1 {
+  font-family: "Franklin Gothic Medium", Times, serif;
+  color: #65BAC6;
+  font-size: 1.3cm;
+  margin-bottom: 0.3em;
+  text-align: left;
+  text-shadow: 0 0 3px #333166, 0 0 5px #04031b;
+}
+
+.center {
+  text-align: center;
+  font-family: "Book Antiqua", Times, serif;
+  color: #1d0481;
+  font-size: 1em;
+}
+
+.dice{
+  text-align: center;
+  font-family: "Arial Black", Times, serif;
+  color: #E22F89;
+  font-size: 1em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+

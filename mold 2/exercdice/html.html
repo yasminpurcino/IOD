@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css.css" rel="stylesheet">
+    <script src="java.js"></script>
+</head>
+<body>
+  <h1> Virtual <p1>DICE</p1></h1> 
+       
+  <img src="https://photos.google.com/photo/AF1QipO0AWvkwRw6RSESzjfoGWrNj9vSwZEGSUKZnIl0" class="center" alt="dice" width="300" height="253" > 
+  <p class="center">Online virtual dice roller that is capable of simultaneously rolling up to 6 dices randomly<br> 
+        and with 8 of sides is also provided.</p2>
+                    
+  <form action="#">
+    <p class="dice"> <label for="lang">Number of Dice: </label> 
+      <select name="number" id="numberOfDice"> 
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </p>
+  </form>
+    
+    
+    <p class="dice"> <label for="lang">Sides on a Dice: </label> 
+      <select name="size" id="side">
+        <option value="1">3</option>
+        <option value="2">4</option>
+        <option value="3">5</option>
+        <option value="4">6</option>
+        <option value="5">7</option>
+        <option value="6">8</option>
+      </select>
+    </p>
+
+    
+
+    <button type="button" id="myBtn" onclick="displayResult()">Start</button>
+
+    <p id="result" class="dice"></p>
+
+
+  </body>
+</html>
+  
