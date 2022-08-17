@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <body>
   <script type="text/javascript">
-    function multiply(){
-      a=Number(document.my_cal.first.value);
-      b=Number(document.my_cal.second.value);
-      c=a*b;
-      document.my_cal.total.value=c;
+    function multiply() {
+      a = Number(document.my_cal.first.value);
+      b = Number(document.my_cal.second.value);
+      c = a * b;
+      document.my_cal.total.value = c;
     }
-    function addition(){
-      a=Number(document.my_cal.first.value);
-      b=Number(document.my_cal.second.value);
-      c=a+b;
-      document.my_cal.total.value=c;
+    function addition() {
+      a = Number(document.my_cal.first.value);
+      b = Number(document.my_cal.second.value);
+      c = a + b;
+      document.my_cal.total.value = c;
     }
-    function subtraction(){
-      a=Number(document.my_cal.first.value);
-      b=Number(document.my_cal.second.value);
-      c=a-b;
-      document.my_cal.total.value=c;
+    function subtraction() {
+      a = Number(document.my_cal.first.value);
+      b = Number(document.my_cal.second.value);
+      c = a - b;
+      document.my_cal.total.value = c;
     }
-    function division(){
-      a=Number(document.my_cal.first.value);
-      b=Number(document.my_cal.second.value);
-      c=a/b;
-      document.my_cal.total.value=c;
+    function division() {
+      a = Number(document.my_cal.first.value);
+      b = Number(document.my_cal.second.value);
+      c = a / b;
+      document.my_cal.total.value = c;
     }
-    function modulus(){
-      a=Number(document.my_cal.first.value);
-      b=Number(document.my_cal.second.value);
-      c=a%b;
-      document.my_cal.total.value=c;
+    function modulus() {
+      a = Number(document.my_cal.first.value);
+      b = Number(document.my_cal.second.value);
+      c = a % b;
+      document.my_cal.total.value = c;
     }
   </script>
   <!-- Opening a HTML Form. -->
@@ -48,6 +49,7 @@
     <input type="button" value="MOD" onclick="javascript:modulus();">
     <br><br>
     <!-- Here result will be displayed. -->
-    Get Result: <input type="text" name="total">
-  </body>
-  </html>
+    Get a Result: <input type="text" name="total">
+</body>
+
+</html>
