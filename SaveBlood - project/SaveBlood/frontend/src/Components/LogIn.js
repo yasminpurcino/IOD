@@ -1,11 +1,10 @@
 import Logo from './Logo.png'
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
-import getUser from '../Controller/User';
+import {getUser} from '../Controller/User';
 import { useNavigate } from "react-router-dom";
 
-//errorMessages: Store an object with an error message and the name of the field.
-//isSubmitted: boolean value to indicate if the form is successfully submitted or not.
+
 
 function LogIn() {
   // React States
@@ -15,18 +14,7 @@ function LogIn() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // User Login info - test
-  // const database = [
-  //   {
-  //     email: "yasmin",
-  //     password: "test1"
-  //   },
-  //   {
-  //     email: "ana",
-  //     password: "test2"
-  //   }
-  // ];
-
+ 
   const errors = {
     email: "invalid email",
     pass: "invalid password"

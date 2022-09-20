@@ -1,6 +1,6 @@
 import Logo from './Logo.png'
 import React, {useState} from 'react';
-
+// import { createUser } from '../Controller/user';
 import {Link} from "react-router-dom";
 
 
@@ -32,88 +32,90 @@ function CreateAccount() {
     }
 
     const handleSubmit = () => {
+        if (password !== confirmPassword) {
+            document.getElementById('errorMsg').innerHTML = 'bla'
+        }
         console.log(firstName, lastName, email, password, confirmPassword);
     }
 
-    return (
-        <div class="row img">
-            <div className="imgLogo">
-                <img src={Logo}
-                    alt="logo"/>
-            </div>
+    return (<div class="row img">
+        <div className="imgLogo">
+            <img src={Logo}
+                alt="logo"/>
+        </div>
 
-            <div className="title">
-                Create Account:</div>
+        <div className="title">
+            Create Account:</div>
 
-            <div className="form">
-                <div className="form-body">
-                    <div className="username">
-                        <label className="form__label" for="firstName"></label>
-                        <input className="form__input" type="text"
-                            value={firstName}
-                            onChange=
-                            {(e) => handleInputChange(e)}
-                            id="firstName"
-                            placeholder="First Name"/>
-                    </div>
-                </div>
-                <div className="lastname">
-                    <label className="form__label" for="lastName"></label>
-                    <input type="text" name="" id="lastName"
-                        value={lastName}
-                        className="form__input"
+        <div className="form">
+            <div className="form-body">
+                <div className="username">
+                    <label className="form__label" for="firstName"></label>
+                    <input className="form__input" type="text"
+                        value={firstName}
                         onChange=
                         {(e) => handleInputChange(e)}
-                        placeholder="Last Name"/>
-                </div>
-                <div className="email">
-                    <label className="form__label" for="email"></label>
-                    <input type="email" id="email" className="form__input"
-                        value={email}
-                        onChange=
-                        {(e) => handleInputChange(e)}
-                        placeholder="E-mail"/>
-                </div>
-
-                <div className="password">
-                    <label className="form__label" for="password"></label>
-                    <input className="form__input" type="password" id="password"
-                        value={password}
-                        onChange=
-                        {(e) => handleInputChange(e)}
-                        placeholder="Password"/>
-                </div>
-                <div className="confirm-password">
-                    <label className="form__label" for="confirmPassword"></label>
-                    <input className="form__input" type="password" id="confirmPassword"
-                        value={confirmPassword}
-                        onChange=
-                        {(e) => handleInputChange(e)}
-                        placeholder="Confirm Password"/>
+                        id="firstName"
+                        placeholder="First Name"/>
                 </div>
             </div>
+            <div className="lastname">
+                <label className="form__label" for="lastName"></label>
+                <input type="text" name="" id="lastName"
+                    value={lastName}
+                    className="form__input"
+                    onChange=
+                    {(e) => handleInputChange(e)}
+                    placeholder="Last Name"/>
+            </div>
+            <div className="email">
+                <label className="form__label" for="email"></label>
+                <input type="email" id="email" className="form__input"
+                    value={email}
+                    onChange=
+                    {(e) => handleInputChange(e)}
+                    placeholder="E-mail"/>
+            </div>
 
-            <div class="row">
-                <div class="col create2">
-                    <div className='createAccount2'>
-                        <button onClick={
-                                () => handleSubmit()
-                            }
-                            type="submit"
-                            class="btn">Create Account</button>
-                        <div className="fontCreate" href="/createaccount">
-                            Already have an account? 
-                            <b><Link className='linkPageEnd' to="/createaccount"> 
-                            Log in here
-                            </Link> </b>
-                        </div>
+            <div className="password">
+                <label className="form__label" for="password"></label>
+                <input className="form__input" type="password" id="password"
+                    value={password}
+                    onChange=
+                    {(e) => handleInputChange(e)}
+                    placeholder="Password"/>
+            </div>
+            <div className="confirm-password">
+                <label className="form__label" for="confirmPassword"></label>
+                <input className="form__input" type="password" id="confirmPassword"
+                    value={confirmPassword}
+                    onChange=
+                    {(e) => handleInputChange(e)}
+                    placeholder="Confirm Password"/>
+            </div>
+            <p id="errorMsg"></p>
+        </div>
+
+        <div class="row">
+            <div class="col create2">
+                <div className='createAccount2'>
+                    <button onClick={
+                            () => handleSubmit()
+                        }
+                        type="submit"
+                        class="btn">Create Account</button>
+                    <div className="fontCreate" href="/createaccount">
+                        Already have an account?
+                        <b>
+                            <Link className='linkPageEnd' to="/createaccount">
+                                Log in here
+                            </Link>
+                        </b>
                     </div>
                 </div>
             </div>
         </div>
-
-
-    )
+    </div>)
 }
 
 export default CreateAccount
