@@ -1,8 +1,8 @@
 import Logo from './Logo.png'
 import React, {useState} from 'react';
-
+import {useNavigate} from "react-router-dom";
 import {Link} from "react-router-dom";
-import { createUser } from '../Controller/User';
+import {createUser} from '../Controller/User';
 
 
 function CreateAccount() {
@@ -12,6 +12,7 @@ function CreateAccount() {
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
     const [confirmPassword, setConfirmPassword] = useState(null);
+    const navigate = useNavigate();
     const handleInputChange = (e) => {
         const {id, value} = e.target;
         if (id === "firstName") {
@@ -33,19 +34,19 @@ function CreateAccount() {
     }
 
     const handleSubmit = async (event) => {
-         //Prevent page reload
-         //event.preventDefault();
-         document.getElementById('errorMsg').innerHTML = ' '
+        // Prevent page reload
+        // event.preventDefault();
+        document.getElementById('errorMsg').innerHTML = ' '
         if (password !== confirmPassword) {
             document.getElementById('errorMsg').innerHTML = 'Password '
             return
         }
         console.log(firstName, lastName, email, password, confirmPassword);
         let error = await createUser(firstName, lastName, email, password)
-        if (error){
+        if (error) {
             document.getElementById('errorMsg').innerHTML = error
-        } 
-        console.log('all good')
+        }
+        navigate("/main")
     }
 
     return (<div class="row img">
