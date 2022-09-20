@@ -1,5 +1,5 @@
 // funcao para comparar usuario login e senha com o q tem no DB
-const axios = require("axios"); 
+const axios = require("axios");
 
 export async function getUser(email, password) {
     let loginUser = false
@@ -31,20 +31,19 @@ export async function getUser(email, password) {
 }
 
 
-export async function createUser (firstName, lastName, email, password){
-    const response = await axios.post('http://localhost:8080/api/users/',{
+export async function createUser(firstName, lastName, email, password) {
+    const response = await axios.post('http://localhost:8080/api/users/', {
         "name": firstName,
-        "lastname" : lastName,
-        "email" : email,
-        "password" : password
-    })
-    .then(function(response){
-        console.log(response);
+        "lastname": lastName,
+        "email": email,
+        "password": password
+    }).then(function (response) {
+        console.log(response.status);
+        // if response.status
         return ""
-    })
-    .catch(function(error){
-        console.log(error);
-        return error
+    }).catch(function (error) {
+        console.log(error.message);
+        return error.message
     });
+    return response
 }
-

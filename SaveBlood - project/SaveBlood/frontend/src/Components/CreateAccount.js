@@ -1,7 +1,8 @@
 import Logo from './Logo.png'
 import React, {useState} from 'react';
-// import { createUser } from '../Controller/user';
+
 import {Link} from "react-router-dom";
+import { createUser } from '../Controller/User';
 
 
 function CreateAccount() {
@@ -31,11 +32,20 @@ function CreateAccount() {
 
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = async (event) => {
+         //Prevent page reload
+         //event.preventDefault();
+         document.getElementById('errorMsg').innerHTML = ' '
         if (password !== confirmPassword) {
-            document.getElementById('errorMsg').innerHTML = 'bla'
+            document.getElementById('errorMsg').innerHTML = 'Password '
+            return
         }
         console.log(firstName, lastName, email, password, confirmPassword);
+        let error = await createUser(firstName, lastName, email, password)
+        if (error){
+            document.getElementById('errorMsg').innerHTML = error
+        } 
+        console.log('all good')
     }
 
     return (<div class="row img">
