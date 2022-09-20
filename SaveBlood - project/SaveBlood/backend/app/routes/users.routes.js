@@ -10,19 +10,19 @@ module.exports = app => {
   router.get("/", users.findAll);
 
     // // Retrieve a single User with email
-    router.get("/:email", users.findByEmail);
+  //   router.get("/:email", users.findByEmail);
 
-     // // Retrieve a single User with password
-     router.get("/:pasword", users.findByPassword);
+  //    // // Retrieve a single User with password
+  //    router.get("/:pasword", users.findByPassword);
 
-  // // Update an User with email
-  router.put("/:email", users.updateByEmail);
+  // // // Update an User with email
+  // router.put("/:email", users.updateByEmail);
 
-  // // Delete an User with email
-  router.delete("/:email", users.deleteOne);
+  // // // Delete an User with email
+  // router.delete("/:email", users.deleteOne);
 
-  // // Delete all Users
-  router.delete("/", users.deleteAll);
+  // // // Delete all Users
+  // router.delete("/", users.deleteAll);
 
   app.use('/api/users', router);
 };

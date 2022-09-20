@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Tutorial CRUD application." });
 });
-//require("./app/routes/tutorials.routes")(app);
+require("./app/routes/users.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
