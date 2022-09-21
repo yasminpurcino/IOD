@@ -136,7 +136,7 @@ value="no"
                 
 </fieldset>
 </div>
-<button type="submit" class="btnQuiz"> Submit</button>
+<button  type="submit" class="btnQuiz"> Submit</button>
 
 </div>
    

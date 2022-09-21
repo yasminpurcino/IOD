@@ -7,11 +7,10 @@ import {useNavigate} from "react-router-dom";
 
 function LogIn() { // React States
     const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted] = useState(false);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
 
     const errors = {
         email: "invalid email",
@@ -25,25 +24,15 @@ function LogIn() { // React States
         let loginUser = await getUser(username, password)
         console.log(loginUser)
         if (loginUser) {
-          localStorage.setItem('email', loginUser.email);
-          localStorage.setItem('name', loginUser.name);
-        
+            localStorage.setItem('email', loginUser.email);
+            localStorage.setItem('name', loginUser.name);
+            localStorage.setItem('iduser', loginUser.idusers);
+
             navigate("/main")
         } else {
             setErrorMessages({name: "pass", message: errors.pass})
         }
-        // Compare user info
-        // if (userData) {
-        // if (userData.password !== pass.value) {
-        //     // Invalid password
-        //     setErrorMessages({ name: "pass", message: errors.pass });
-        // } else {
-        //     setIsSubmitted(true);
-        // }
-        // } else {
-        // // Username not found
-        // setErrorMessages({ name: "email", message: errors.email });
-        // }
+
     };
 
     // Generate JSX code for error message
@@ -99,7 +88,7 @@ function LogIn() { // React States
                     <div className="fontLogin" href="/fontCreate">
                         Don’t have an account yet?
                         <b>
-                            <Link className='linkPageEnd' to="/login">Sign up here!</Link>
+                            <Link className='linkPageEnd' to="/createaccount">Sign up here!</Link>
                         </b>
 
                     </div>

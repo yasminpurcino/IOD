@@ -47,3 +47,20 @@ export async function createUser(firstName, lastName, email, password) {
     });
     return response
 }
+
+
+export async function bookUser(iduser, date, location) {
+    const response = await axios.post('http://localhost:8080/api/booking/', {
+        "userId": iduser,
+        "date": date,
+        "location": location
+    }).then(function (response) {
+        console.log(response.status);
+        // if response.status
+        return ""
+    }).catch(function (error) {
+        console.log(error.message);
+        return error.message
+    });
+    return response
+}

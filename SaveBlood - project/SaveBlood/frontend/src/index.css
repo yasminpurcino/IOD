@@ -359,6 +359,7 @@ body{
 
 .form__label{
   width: 5%;
+  
 }
 
 .form_input{
@@ -379,6 +380,7 @@ background: #EB5757;
 border-radius: 10px;
 text-align: center;
 font-size: 15px;
+
 }
 
 .imgLogin2{
@@ -571,10 +573,10 @@ border-radius: 5px;
 
 .location{
   /* image 1 */
- position: relative;
+
  top: 50px;
   max-width: 300px;
-  margin: 100px auto;
+  margin: 50px auto;
   z-index: 1;
   width: 414px;
   height: 295px;
@@ -585,9 +587,11 @@ border-radius: 5px;
 .btnBook{
 /* Book Now */
 
-background: #D55555;
+background: #C53F3F;
 color: #FFFFFF;
-width: 255px ;
+text-align: center;
+/* border: 7px solid red; */
+width: 480px;
 
 
 
@@ -756,3 +760,32 @@ z-index: 1;
   height: 100%;
 }
 
+
+
+.btnStyle .btn-BookNow button{
+  background: #C53F3F;
+  color: #FFFFFF;
+  text-align: center;
+  /* border: 7px solid red; */
+  width: 480px;
+ 
+}
+
+
+.btnStyle .btn-BookNow button:hover{
+  background-color: #C53F3F;
+}
+
+.selected{
+  font-size: 15px;
+  font-family: 'Arial';
+  margin: 10px auto;
+}
+
+.form__inputBook {
+  background: #FFFFFF;
+  border: 0.5px solid #8E8E93;
+  box-shadow: 0px 1px 10px rgb(0 0 0 / 4%);
+  border-radius: 5px;
+  margin: 10px auto;
+}
