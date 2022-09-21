@@ -64,3 +64,5 @@ export async function bookUser(iduser, date, location) {
     });
     return response
 }
+
+

@@ -10,6 +10,7 @@ import {bookUser} from '../Controller/User';
 function BookNow() {
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
+    
     const handleSelect = (e) => {
         console.log(e);
         setLocation(e)
