@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 
 function Main() {
+  const nameUser = localStorage.getItem('name');
   return (
   
     <div>
@@ -13,7 +14,7 @@ function Main() {
       </div>
 
 
-    <div className="titleQuiz">Hello 
+    <div className="titleQuiz">Hello {nameUser}
     </div>
     
     <div className="textQuiz">

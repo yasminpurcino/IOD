@@ -690,26 +690,21 @@ z-index: 1;
   top: 50%;
   right: 25px;
   transform: translateY(-50%);
-  display: none;
+  display: block;
 }
 .hamburger:hover {
   background-color: #d2d6e7;
   
 }
 
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-}
 
-@media screen and (max-width: 768px) {
+
+
   .navigation-menu ul {
     display: none;
   }
-}
 
-@media screen and (max-width: 768px) {
+
   .navigation-menu ul {
   
     position: absolute;
@@ -743,20 +738,19 @@ z-index: 1;
     background-color: white;
     color:#C53F3F
   }
-}
 
-@media screen and (max-width: 768px) {
+
   .navigation-menu ul {
     /* previous styles */
     display: none;
   }
-}
 
-@media screen and (max-width: 768px) {
+
+
   .navigation-menu.expanded ul {
     display: block;
   }
-}
+
 
 .containerDash{
   height: 100%;
