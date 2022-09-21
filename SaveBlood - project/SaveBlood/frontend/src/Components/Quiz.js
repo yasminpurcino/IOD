@@ -139,7 +139,7 @@ function Quiz() {
         </fieldset>
       </div>
 
-      <button  type="submit" class="btnQuiz"> Submit
+      <button  type="submit" className="btnQuiz"> Submit
       </button>
 
     </div>
