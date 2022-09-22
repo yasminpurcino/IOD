@@ -21,7 +21,7 @@ function LogIn() { // React States
         event.preventDefault();
 
         // Find user login info
-        console.log("im here")
+   
         let loginUser = await getUser(username, password)
         console.log(loginUser)
         if (loginUser) {

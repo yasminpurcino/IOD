@@ -32,8 +32,10 @@ export default function Navbar() {
                         (emailName) ? <a className="navBtn" onClickCapture={logout} href="/">LOGOUT</a> : <a className="navBtn" href="/login">LOGIN</a>
                     } </li>
                     <li>
-                        <a className="navBtn" href="/createAccount ">CREATE ACCOUNT</a>
-                    </li>
+                    <a className="navBtn" href="/main">DASHBOARD</a>
+                </li>
+
+                    
                     <li>
                         <a className="navBtn" href="/beforeBook">BOOK NOW
                         </a>

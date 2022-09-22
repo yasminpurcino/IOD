@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 function Main() {
   const nameUser = localStorage.getItem('name');
+  const resultQuiz = localStorage.getItem ('quizResult')
   return (
   
     <div>
@@ -14,13 +15,14 @@ function Main() {
       </div>
 
 
-    <div className="titleQuiz">Hello {nameUser}
+    <div className="titleQuiz">Hello {nameUser},
     </div>
     
     <div className="textQuiz">
     your donation of blood or plasma can help save up three lives.
     </div>
-
+    <div className="titleQuiz"> {resultQuiz}
+    </div>
 
     <div class="col">
       <Button className="quizMain" variant="danger" href="/quiz">Quiz - Eligible to donate</Button>{' '}

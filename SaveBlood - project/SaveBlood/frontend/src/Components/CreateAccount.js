@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {createUser} from '../Controller/User';
-
+import {getUser} from '../Controller/User';
 
 function CreateAccount() {
 
@@ -45,7 +45,18 @@ function CreateAccount() {
         let error = await createUser(firstName, lastName, email, password)
         if (error) {
             document.getElementById('errorMsg').innerHTML = error
+            return
         }
+
+        let loginUser = await getUser(email, password)
+        console.log(loginUser)
+
+            localStorage.setItem('email', loginUser.email);
+            localStorage.setItem('name', loginUser.name);
+            localStorage.setItem('iduser', loginUser.idusers);
+            console.log(loginUser.idusers)
+
+
         navigate("/main")
     }
 

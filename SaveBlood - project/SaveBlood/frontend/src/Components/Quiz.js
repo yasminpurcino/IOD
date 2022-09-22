@@ -15,18 +15,23 @@ function Quiz() {
 
     const handleSubmit = async (event) => {
         document.getElementById('msg').innerHTML = ' '
+
         if (age && weight && height && antibiotics && cold && tattoo && pregnant) {
-            document.getElementById('msg').innerHTML = 'You are Eligible to donate.'
+           
+            localStorage.setItem("quizResult", 'YOU ARE ELIGIBLE TO DONATE!')
 
         } else {
-            document.getElementById('msg').innerHTML = 'You are NOT Eligible to donate.'
+          
+            localStorage.setItem("quizResult", 'YOU ARE NOT ELIGIBLE TO DONATE!')
         }
+        document.getElementById('msg').innerHTML = localStorage.getItem('quizResult')
+
         console.log("age = " + age + " weight= " + weight + "height=" + height + "antibiotics = " + antibiotics + "cold =" + cold + "tattoo = " + tattoo + " pregnant= " + pregnant)
 
 
         // event.preventDefault();
         const iduser = localStorage.getItem('iduser');
-       
+
 
         let quizResult = await createQuiz(iduser, age, weight, height, antibiotics, cold, tattoo, pregnant)
     }
@@ -138,7 +143,7 @@ function Quiz() {
                 className="btnQuiz">
                 Submit
             </button>
-            <p id="msg"></p>
+            <p className='resultQuiz' id="msg"></p>
 
 
         </div>
