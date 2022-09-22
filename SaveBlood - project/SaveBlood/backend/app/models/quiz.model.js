@@ -3,8 +3,9 @@ const sql = require("./db.js");
 
 // constructor
 const Quiz = function (quiz) {
-  this.userId = quiz.userId;
+  this.iduser = quiz.iduser;
   this.age = quiz.age;
+  this.weight = quiz.weight;
   this.height = quiz.height;
   this.antibiotics = quiz.antibiotics;
   this.cold = quiz.cold;
