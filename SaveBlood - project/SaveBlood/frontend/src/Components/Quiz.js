@@ -14,14 +14,15 @@ function Quiz() {
     const [pregnant, setPregnant] = useState('');
 
     const handleSubmit = async (event) => {
-      document.getElementById('msg').innerHTML = ' '
-      if (age &&  weight && height && antibiotics && cold && tattoo && pregnant) {
-          document.getElementById('msg').innerHTML = 'You are Eligible to donate.'
-         
-      }
-      else{document.getElementById('msg').innerHTML = 'You are NOT Eligible to donate.'}
-      
-   
+        document.getElementById('msg').innerHTML = ' '
+        if (age && weight && height && antibiotics && cold && tattoo && pregnant) {
+            document.getElementById('msg').innerHTML = 'You are Eligible to donate.'
+
+        } else {
+            document.getElementById('msg').innerHTML = 'You are NOT Eligible to donate.'
+        }
+        console.log("age = " + age + " weight= " + weight + "height=" + height + "antibiotics = " + antibiotics + "cold =" + cold + "tattoo = " + tattoo + " pregnant= " + pregnant)
+
 
         // event.preventDefault();
         const iduser = localStorage.getItem('iduser');
@@ -52,79 +53,79 @@ function Quiz() {
                     </h4>
                     <label className='answerQuiz'>
                         under 18
-                        <input onSelect= {(e) => setAge(false)} className='radioForm' name="age" type="radio"/>
+                        <input onChange= {(e) => setAge(false)} className='radioForm' name="age" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         above 18
-                        <input onSelect= {(e) => setAge(true)} className='radioForm' name="age" type="radio"/>
+                        <input onChange= {(e) => setAge(true)} className='radioForm' name="age" type="radio"/>
                     </label>
 
                     <h4 className='textForm'>your weight?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         under 51kg
-                        <input onSelect= {(e) => setWeight(false)} className='radioForm' name="weight" type="radio"/>
+                        <input onChange= {(e) => setWeight(false)} className='radioForm' name="weight" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         over 51kg
-                        <input onSelect= {(e) => setWeight(true)} className='radioForm' name="weight" type="radio"/>
+                        <input onChange= {(e) => setWeight(true)} className='radioForm' name="weight" type="radio"/>
                     </label>
 
 
                     <h4 className='textForm'>your height?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         under 151cm
-                        <input onSelect= {(e) => setHeight(false)} className='radioForm' name="height" type="radio"/>
+                        <input onChange= {(e) => setHeight(false)} className='radioForm' name="height" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         over 151cm
-                        <input onSelect= {(e) => setHeight(true)} className='radioForm' name="height" type="radio"/>
+                        <input onChange= {(e) => setHeight(true)} className='radioForm' name="height" type="radio"/>
                     </label>
 
                     <h4 className='textForm'>have you had a cough, cold, sore throat or influenza in last 28 days?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         yes
-                        <input onSelect= {(e) => setCold(false)} className='radioForm' name="cold" type="radio"/>
+                        <input onChange= {(e) => setCold(false)} className='radioForm' name="cold" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         no
-                        <input onSelect= {(e) => setCold(true)} className='radioForm' name="cold" type="radio"/>
+                        <input onChange= {(e) => setCold(true)} className='radioForm' name="cold" type="radio"/>
                     </label>
 
 
                     <h4 className='textForm'>have you had a tattoo or piercing in the last 3 months?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         yes
-                        <input onSelect= {(e) => setTattoo(false)} className='radioForm' name="tattoo" type="radio"/>
+                        <input onChange= {(e) => setTattoo(false)} className='radioForm' name="tattoo" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         no
-                        <input onSelect= {(e) => setTattoo(true)} className='radioForm' name="tattoo" type="radio"/>
+                        <input onChange= {(e) => setTattoo(true)} className='radioForm' name="tattoo" type="radio"/>
                     </label>
 
                     <h4 className='textForm'>have you been pregnant or given in the last 9 months?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         yes
-                        <input onSelect= {(e) => setPregnant(false)} className='radioForm' name="pregnant" type="radio"/>
+                        <input onChange= {(e) => setPregnant(false)} className='radioForm' name="pregnant" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         no
-                        <input onSelect= {(e) => setPregnant(true)} className='radioForm' name="pregnant" type="radio"/>
+                        <input onChange= {(e) => setPregnant(true)} className='radioForm' name="pregnant" type="radio"/>
                     </label>
 
                     <h4 className='textForm'>have you taken antibiotics in the last seven days?
                     </h4>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         yes
-                        <input onSelect= {(e) => setAntibiotics(false)} className='radioForm' name="antibiotics" type="radio"/>
+                        <input onChange= {(e) => setAntibiotics(false)} className='radioForm' name="antibiotics" type="radio"/>
                     </label>
-                    <label  className='answerQuiz'>
+                    <label className='answerQuiz'>
                         no
-                        <input onSelect= {(e) => setAntibiotics(true)} className='radioForm' name="antibiotics" type="radio"/>
+                        <input onChange= {(e) => setAntibiotics(true)} className='radioForm' name="antibiotics" type="radio"/>
                     </label>
 
                 </form>
@@ -138,7 +139,7 @@ function Quiz() {
                 Submit
             </button>
             <p id="msg"></p>
-      
+
 
         </div>
 
