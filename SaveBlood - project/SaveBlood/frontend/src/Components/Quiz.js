@@ -26,7 +26,7 @@ function Quiz() {
 
         // event.preventDefault();
         const iduser = localStorage.getItem('iduser');
-        // console.log(iduser)
+       
 
         let quizResult = await createQuiz(iduser, age, weight, height, antibiotics, cold, tattoo, pregnant)
     }

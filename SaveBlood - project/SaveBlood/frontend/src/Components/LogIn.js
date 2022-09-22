@@ -21,12 +21,14 @@ function LogIn() { // React States
         event.preventDefault();
 
         // Find user login info
+        console.log("im here")
         let loginUser = await getUser(username, password)
         console.log(loginUser)
         if (loginUser) {
             localStorage.setItem('email', loginUser.email);
             localStorage.setItem('name', loginUser.name);
             localStorage.setItem('iduser', loginUser.idusers);
+            console.log(loginUser.idusers)
 
             navigate("/main")
         } else {
