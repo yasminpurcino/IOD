@@ -1,97 +1,144 @@
-import React from 'react'
+import React from 'react';
 import Logo from './Logo.png'
+import {useState} from 'react'
+import {createQuiz} from '../Controller/Quiz';
 
 
 function Quiz() {
+    const [age, setAge] = useState('');
+    const [weight, setWeight] = useState('');
+    const [height, setHeight] = useState('');
+    const [antibiotics, setAntibiotics] = useState('');
+    const [cold, setCold] = useState('');
+    const [tattoo, setTattoo] = useState('');
+    const [pregnant, setPregnant] = useState('');
+
+    const handleSubmit = async (event) => {
+      document.getElementById('msg').innerHTML = ' '
+      if (age &&  weight && height && antibiotics && cold && tattoo && pregnant) {
+          document.getElementById('msg').innerHTML = 'You are Eligible to donate.'
+         
+      }
+      else{document.getElementById('msg').innerHTML = 'You are NOT Eligible to donate.'}
+      
+   
+
+        // event.preventDefault();
+        const iduser = localStorage.getItem('iduser');
+        // console.log(iduser)
+
+        let quizResult = await createQuiz(iduser, age, weight, height, antibiotics, cold, tattoo, pregnant)
+    }
+
     return (
 
         <div>
-            <div className="imgLogoQuiz">
-                <img src={Logo}
-                    alt="logo"/>
-            </div>
+
             <div className="titleQuiz">Am I eligible to become a Donor ?
             </div>
 
             <div className="textQuiz">
                 In order to donate blood, plasma or platelets, you must pass a list of criteria to ensure that your donation is safe
             </div>
+
+            <div className="imgLogoQuiz">
+                <img src={Logo}
+                    alt="logo"/>
+            </div>
             <div>
-                <form className='formQuiz'>
-                    <h3 className='textForm'>your age?
-                    </h3>
-                    <label>
+                <form onSubmit={handleSubmit}
+                    className='formQuiz'>
+                    <h4 className='textForm'>your age?
+                    </h4>
+                    <label className='answerQuiz'>
                         under 18
-                        <input className='radioForm' name="age" type="radio"/>
+                        <input onSelect= {(e) => setAge(false)} className='radioForm' name="age" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         above 18
-                        <input className='radioForm' name="age" type="radio"/>
+                        <input onSelect= {(e) => setAge(true)} className='radioForm' name="age" type="radio"/>
                     </label>
 
-                    <h3 className='textForm'>your weight?
-                    </h3>
-                    <label>
+                    <h4 className='textForm'>your weight?
+                    </h4>
+                    <label  className='answerQuiz'>
                         under 51kg
-                        <input className='radioForm' name="weight" type="radio"/>
+                        <input onSelect= {(e) => setWeight(false)} className='radioForm' name="weight" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         over 51kg
-                        <input className='radioForm' name="weight" type="radio"/>
+                        <input onSelect= {(e) => setWeight(true)} className='radioForm' name="weight" type="radio"/>
                     </label>
 
 
-                    <h3 className='textForm'>your height?
-                    </h3>
-                    <label>
+                    <h4 className='textForm'>your height?
+                    </h4>
+                    <label  className='answerQuiz'>
                         under 151cm
-                        <input className='radioForm' name="height" type="radio"/>
+                        <input onSelect= {(e) => setHeight(false)} className='radioForm' name="height" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         over 151cm
-                        <input className='radioForm' name="height" type="radio"/>
+                        <input onSelect= {(e) => setHeight(true)} className='radioForm' name="height" type="radio"/>
                     </label>
 
-
-                    <h3 className='textForm'>have you had a tattoo or piercing in the last 3 months?
-                    </h3>
-                    <label>
+                    <h4 className='textForm'>have you had a cough, cold, sore throat or influenza in last 28 days?
+                    </h4>
+                    <label  className='answerQuiz'>
                         yes
-                        <input className='radioForm' name="tattoo" type="radio"/>
+                        <input onSelect= {(e) => setCold(false)} className='radioForm' name="cold" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         no
-                        <input className='radioForm' name="tattoo" type="radio"/>
+                        <input onSelect= {(e) => setCold(true)} className='radioForm' name="cold" type="radio"/>
                     </label>
 
-                    <h3 className='textForm'>have you been pregnant or given in the last 9 months?
-                    </h3>
-                    <label>
+
+                    <h4 className='textForm'>have you had a tattoo or piercing in the last 3 months?
+                    </h4>
+                    <label  className='answerQuiz'>
                         yes
-                        <input className='radioForm' name="pregnant" type="radio"/>
+                        <input onSelect= {(e) => setTattoo(false)} className='radioForm' name="tattoo" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         no
-                        <input className='radioForm' name="pregnant" type="radio"/>
+                        <input onSelect= {(e) => setTattoo(true)} className='radioForm' name="tattoo" type="radio"/>
                     </label>
 
-                    <h3 className='textForm'>have you taken antibiotics in the last seven days?
-                    </h3>
-                    <label>
+                    <h4 className='textForm'>have you been pregnant or given in the last 9 months?
+                    </h4>
+                    <label  className='answerQuiz'>
                         yes
-                        <input className='radioForm' name="antibiotics" type="radio"/>
+                        <input onSelect= {(e) => setPregnant(false)} className='radioForm' name="pregnant" type="radio"/>
                     </label>
-                    <label>
+                    <label  className='answerQuiz'>
                         no
-                        <input className='radioForm' name="antibiotics" type="radio"/>
+                        <input onSelect= {(e) => setPregnant(true)} className='radioForm' name="pregnant" type="radio"/>
+                    </label>
+
+                    <h4 className='textForm'>have you taken antibiotics in the last seven days?
+                    </h4>
+                    <label  className='answerQuiz'>
+                        yes
+                        <input onSelect= {(e) => setAntibiotics(false)} className='radioForm' name="antibiotics" type="radio"/>
+                    </label>
+                    <label  className='answerQuiz'>
+                        no
+                        <input onSelect= {(e) => setAntibiotics(true)} className='radioForm' name="antibiotics" type="radio"/>
                     </label>
 
                 </form>
             </div>
 
-            <button type="submit" className="btnQuiz">
+            <button onClick={
+                    () => handleSubmit()
+                }
+                type="submit"
+                className="btnQuiz">
                 Submit
             </button>
+            <p id="msg"></p>
+      
 
         </div>
 

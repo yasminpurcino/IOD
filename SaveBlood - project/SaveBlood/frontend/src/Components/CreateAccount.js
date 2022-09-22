@@ -38,7 +38,7 @@ function CreateAccount() {
         // event.preventDefault();
         document.getElementById('errorMsg').innerHTML = ' '
         if (password !== confirmPassword) {
-            document.getElementById('errorMsg').innerHTML = 'Password '
+            document.getElementById('errorMsg').innerHTML = 'Password does not match.'
             return
         }
         console.log(firstName, lastName, email, password, confirmPassword);

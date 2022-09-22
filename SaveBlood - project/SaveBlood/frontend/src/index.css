@@ -427,10 +427,8 @@ color: #D38F0A;
   /* icone logo */
 
 width: 194px;
-position: absolute;
-top: 135px;
-right: 16px;
-font-size: 18px;
+margin: 20px auto;
+float:right;
 
 
 
@@ -776,6 +774,8 @@ z-index: 1;
   background-color: #C53F3F;
 }
 
+
+
 .selected{
   font-size: 15px;
   font-family: 'Arial';
@@ -790,12 +790,17 @@ z-index: 1;
   margin: 10px auto;
 }
 
-.textForm{
-  margin-top: 13px;
- 
-}
+
 
 .radioForm{
   margin-right: 20px;
   margin-left: 5px;
+}
+
+.answerQuiz{
+
+color:#363636;
+font-size: 16px;
+font-family: 'Arial';
+text-shadow:none
 }

@@ -1,9 +1,10 @@
 const axios = require("axios");
 
-export async function createQuiz(iduser, age, height, antibiotics, cold, tattoo, pregnant) {
+export async function createQuiz(iduser, age, weight, height, antibiotics, cold, tattoo, pregnant) {
     const response = await axios.post('http://localhost:8080/api/quiz/', {
         "userId": iduser,
         "age": age,
+        "weight": weight,
         "height": height,
         "antibiotics": antibiotics,
         "cold": cold,
