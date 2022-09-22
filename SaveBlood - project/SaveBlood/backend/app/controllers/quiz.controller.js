@@ -31,7 +31,7 @@ exports.create = (req, res) => {
     else res.send(data);
   });
 };
-exports.update = (req, res) => {
+exports.updateByEmail = (req, res) => {
   // Validate Request
   if (!req.body) {
     res.status(400).send({

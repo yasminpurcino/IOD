@@ -6,7 +6,7 @@ module.exports = app => {
     // Create a new User
     router.post("/", users.create);
 
-    // // Retrieve all Users
+    // // Retrieve by Email
     router.get("/", users.findByEmail);
 
 
@@ -17,7 +17,17 @@ module.exports = app => {
     // router.delete("/:email", users.deleteOne);
 
     // // // Delete all Users
-     router.put("/", users.deleteAll);
+    router.put("/", users.deleteAll);
 
     app.use('/api/users', router);
+
+
+    // const quiz = require("../controllers/quiz.controller.js");
+    // var router2 = require("express").Router();
+
+    // router2.get("/", quiz.findAll);
+
+    // app.use('/api/quiz', router2);
+
+
 };
