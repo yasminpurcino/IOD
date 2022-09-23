@@ -27,8 +27,8 @@ Booking.create = (newBooking, result) => {
     });
 };
 
-Booking.findById = (id, result) => {
-    sql.query(`SELECT * FROM bookings WHERE id = ${id}`, (err, res) => {
+Booking.findById = (iduser, result) => {
+    sql.query(`SELECT * FROM bookings WHERE iduser = ${iduser}`, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(err, null);
@@ -58,8 +58,7 @@ Booking.updateById = (id, booking, result) => {
             return;
         }
 
-        if (res.affectedRows == 0) {
-            // not found Bookingwith the id
+        if (res.affectedRows == 0) { // not found Bookingwith the id
             result({
                 kind: "not_found"
             }, null);
@@ -77,24 +76,6 @@ Booking.updateById = (id, booking, result) => {
     });
 };
 
-Booking.findById = (id, result) => {
-    sql.query(`SELECT * FROM bookings WHERE id = ${id}`, (err, res) => {
-        if (err) {
-            console.log("error:", err);
-            result(err, null);
-            return;
-        }
-
-        if (res.length) {
-            console.log("found booking:", res[0]);
-            result(null, res[0]);
-            return;
-        }
-        result({
-            kind: "not_found"
-        }, null)
-    });
-};
 
 Booking.findAll = (email, result) => {
     let query = "SELECT * FROM bookings";

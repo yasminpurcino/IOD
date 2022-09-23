@@ -75,17 +75,17 @@ exports.findAll = (req, res) => {
 };
 
 
-exports.findByEmail = (req, res) => {
-  Booking.findByEmail(req.params.email, (err, data) => {
+exports.findById = (req, res) => {
+  Booking.findById(req.params.iduser, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
-          message: `Not found Booking with email ${req.params.email}.`
+          message: `Not found Booking with iduser ${req.params.iduser}.`
         });
         return
       }
       res.status(500).send({
-        message: "Error updating Booking with email " + req.params.email
+        message: "Error updating Booking with iduser " + req.params.iduser
       });
       return
     }

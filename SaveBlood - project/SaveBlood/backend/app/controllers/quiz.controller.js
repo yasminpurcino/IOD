@@ -16,7 +16,8 @@ exports.create = (req, res) => { // Validate request
         antibiotics: req.body.antibiotics,
         cold: req.body.cold,
         tattoo: req.body.tattoo,
-        pregnant: req.body.pregnant
+        pregnant: req.body.pregnant,
+        resultQuiz:req.body.result
 
     });
 

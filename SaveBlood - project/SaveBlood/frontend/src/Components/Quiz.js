@@ -17,11 +17,11 @@ function Quiz() {
         document.getElementById('msg').innerHTML = ' '
 
         if (age && weight && height && antibiotics && cold && tattoo && pregnant) {
-           
+            document.getElementById('msg').innerHTML = 'YOU ARE ELIGIBLE TO DONATE!'
             localStorage.setItem("quizResult", 'YOU ARE ELIGIBLE TO DONATE!')
 
         } else {
-          
+            document.getElementById('msg').innerHTML = 'YOU ARE NOT ELIGIBLE TO DONATE!'
             localStorage.setItem("quizResult", 'YOU ARE NOT ELIGIBLE TO DONATE!')
         }
         document.getElementById('msg').innerHTML = localStorage.getItem('quizResult')

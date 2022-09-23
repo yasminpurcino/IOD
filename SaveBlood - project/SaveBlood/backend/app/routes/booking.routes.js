@@ -9,8 +9,8 @@ module.exports = app => {
   // // Retrieve all Booking
   router.get("/", booking.findAll);
 
-  // // Retrieve a single Booking with Email
-  router.get("/:email", booking.findByEmail);
+  // // Retrieve a single Booking with Id
+  router.get("/:iduser", booking.findById);
 
   // // Update an Booking with Email
   router.put("/:email", booking.update);
