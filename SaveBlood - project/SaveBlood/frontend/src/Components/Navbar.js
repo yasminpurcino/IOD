@@ -5,12 +5,14 @@ export default function Navbar() {
     const emailName = localStorage.getItem
     ('email');
     const [isLoggedin, setIsLoggedin] = useState(false);
+    
 
     const logout = () => {
         localStorage.clear();
         setIsLoggedin(false);
       };
 
+  
       
     return (
         <nav className="navigation">
@@ -31,15 +33,24 @@ export default function Navbar() {
                     <li> {
                         (emailName) ? <a className="navBtn" onClickCapture={logout} href="/">LOGOUT</a> : <a className="navBtn" href="/login">LOGIN</a>
                     } </li>
-                    <li>
-                    <a className="navBtn" href="/main">DASHBOARD</a>
-                </li>
 
+                    <li>{(emailName) ? <a className="navBtn"
+                     href="/bookNow">Book Now </a> :<a className="navBtn" href="/beforeBook">BOOK NOW
+                    </a>
+                 } </li>
+
+                <li> {(emailName) ? <a className="navBtn" 
+                 href="/quiz">Quiz
+                </a> : <a className="navBtn" href="/beforeQuiz"> Quiz</a>
+                }
+                </li>
                     
-                    <li>
-                        <a className="navBtn" href="/beforeBook">BOOK NOW
-                        </a>
-                    </li>
+                    <li> { 
+                        (emailName) ? <a className="navBtn" href="/main">DASHBOARD
+                    </a> : <a className="navBtn" href="/main" ></a>
+                    } </li>
+
+                                        
                 </ul>
             </div>
         </nav>

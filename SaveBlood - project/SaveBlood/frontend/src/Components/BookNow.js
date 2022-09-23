@@ -7,17 +7,16 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import {bookUser} from '../Controller/User';
 
 
-
 function BookNow() {
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
-    
+
     const handleSelect = (e) => {
         console.log(e);
         setLocation(e)
     }
     const handleSubmit = async (event) => {
-        document.getElementById('msg').innerHTML= 'Your booking is confirmed!'
+        document.getElementById('msg').innerHTML = 'Your booking is confirmed!'
 
 
         event.preventDefault();
@@ -63,9 +62,9 @@ function BookNow() {
                         src={Location}
                         alt="location"/>
                 </div>
-                <button onClick= {() => handleSubmit()} type="submit" class="btnBook">
+                <button type="submit" class="btnBook">
                     Submit</button>
-                    <p className='resultBook' id="msg"></p>
+                <p className='resultBook' id="msg"></p>
             </form>
         </div>
     )
