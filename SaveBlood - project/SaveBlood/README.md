@@ -3,11 +3,13 @@
 SaveBlood is an app that allows easy connection between hospitals and potential blood donors. 
 The app gives the option to find a blood centres and hospitals. 
 The users can find out if their eligible to donate and see what kind blood needed the most.
-To do eligible 
+
 
 ## Requirements
 - MYSQL up and running with 3 tables 
-  - Users: iduser (PK, AI), name(NN), email(NN), password(NN)
+  - Users: iduser (PK, AI), name(NN), lastName(NN), email(NN), password(NN)
+  - Quiz: idquiz (PK, AI), iduser, age, weight, height, antibiotics, cold, tatoo, pregnant 
+  - Bookings: idbookings, iduser, date, locantion
 - nodejs
 - npm 
  
@@ -28,8 +30,8 @@ First you set up MYSQL integration by changing `backend/app/config/db.config.js`
 ### Backend 
 To start a backend 
  `cd backend && npm start`
-the backend will be running at local..
-
+Runs the app in the development mode.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser
 
 ### Frontend
  `cd frontend npm start`
@@ -40,4 +42,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## todo
+
+- add testing (nodejs unit test and react unit test )
+- capstone
+- result quiz on login
+    - create backend function that returns if the user is eliglble to donate by looking at the last quiz answer 
+    - call this function on login and set the state (if the user has answer the quiz )
+
+
 
