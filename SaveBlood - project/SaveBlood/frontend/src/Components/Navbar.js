@@ -8,7 +8,7 @@ export default function Navbar() {
     
 
     const logout = () => {
-        localStorage.clear();
+        localStorage();
         setIsLoggedin(false);
       };
 

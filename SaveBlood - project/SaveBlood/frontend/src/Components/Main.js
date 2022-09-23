@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 function Main() {
   const nameUser = localStorage.getItem('name');
   const resultQuiz = localStorage.getItem ('quizResult')
+  const dateBook = localStorage.getItem ('date')
+  const locationBook = localStorage.getItem ('location')
   return (
   
     <div>
@@ -22,6 +24,9 @@ function Main() {
     your donation of blood or plasma can help save up three lives.
     </div>
     <div className="titleQuiz"> {resultQuiz}
+    </div>
+
+    <div className="textQuiz"> You have a booking on {dateBook}, {locationBook}
     </div>
 
     <div class="col">

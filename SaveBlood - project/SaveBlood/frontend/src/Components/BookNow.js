@@ -18,6 +18,9 @@ function BookNow() {
     const handleSubmit = async (event) => {
         document.getElementById('msg').innerHTML = 'Your booking is confirmed!'
 
+        
+        localStorage.setItem('date', date);
+        localStorage.setItem('location', location);
 
         event.preventDefault();
         const iduser = localStorage.getItem('iduser');
