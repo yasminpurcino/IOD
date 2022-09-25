@@ -43,13 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## todo
-
-- add testing (nodejs unit test and react unit test )
-- capstone
-- result quiz on login
-    - create backend function that returns if the user is eliglble to donate by looking at the last quiz answer 
-    - call this function on login and set the state (if the user has answer the quiz )
 
 
 

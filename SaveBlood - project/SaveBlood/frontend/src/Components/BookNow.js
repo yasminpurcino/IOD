@@ -43,7 +43,7 @@ function BookNow() {
                         <input onChange= {(e) => setDate(e.target.value)} className="form__inputBook" type="text" id="date"/>
                         <br></br>
                         <div className='btnStyle'>
-                            <DropdownButton className='btn-BookNow' alignRight title="Locantion" id="dropdown-menu-align-right"
+                            <DropdownButton className='btn-BookNow' alignRight title="Location" id="dropdown-menu-align-right"
                                 onSelect={handleSelect}>
                                 <Dropdown.Item eventKey="NZ Blood Service Epsom">NZ Blood Service Epsom</Dropdown.Item>
                                 <Dropdown.Item eventKey="NZ Blood Service Manukau">NZ Blood Service Manukau</Dropdown.Item>
